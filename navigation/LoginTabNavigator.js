@@ -6,13 +6,14 @@ import TabBarIcon from '../components/TabBarIcon';
 
 import MapScreen from '../screens/MapScreen';
 import DeckScreen from '../screens/DeckScreen';
-
+import ReviewScreen from '../screens/ReviewScreen';
+import SettingScreen from '../screens/SettingsScreen';
 const MapStack = createStackNavigator({
   Map: MapScreen,
 });
 
 MapStack.navigationOptions = {
-  tabBarLabel: 'Welcome',
+  tabBarLabel: 'Map',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -30,7 +31,22 @@ const DeckStack = createStackNavigator({
 });
 
 DeckStack.navigationOptions = {
-  tabBarLabel: 'Login',
+  tabBarLabel: 'Deck',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+    />
+  ),
+};
+
+const ReviewStack = createStackNavigator({
+  Review: ReviewScreen,
+  Setting: SettingScreen,
+});
+
+ReviewStack.navigationOptions = {
+  tabBarLabel: 'review',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -40,9 +56,8 @@ DeckStack.navigationOptions = {
 };
 
 
-
 export default createBottomTabNavigator({
   MapStack,
   DeckStack,
-  
+  ReviewStack
 });
