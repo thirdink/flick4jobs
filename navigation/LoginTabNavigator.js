@@ -42,7 +42,7 @@ DeckStack.navigationOptions = {
 
 const ReviewStack = createStackNavigator({
   Review: ReviewScreen,
-  Setting: SettingScreen,
+  settings: SettingScreen,
 });
 
 ReviewStack.navigationOptions = {

@@ -46,6 +46,7 @@ const LoginStack = createStackNavigator({
 });
 
 LoginStack.navigationOptions = {
+  // header:null,
   tabBarLabel: 'Main',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
