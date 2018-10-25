@@ -11,10 +11,12 @@ import LoginTabNavigator from './LoginTabNavigator';
 
 const HomeStack = createStackNavigator({
   Home: WelcomeScreen,
+  Auth: AuthScreen,
 });
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Welcome',
+  tabBarVisible: false,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -33,6 +35,7 @@ const AuthStack = createStackNavigator({
 
 AuthStack.navigationOptions = {
   tabBarLabel: 'Auth',
+  tabBarVisible: false,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -48,6 +51,7 @@ const LoginStack = createStackNavigator({
 LoginStack.navigationOptions = {
   // header:null,
   tabBarLabel: 'Main',
+  tabBarVisible: false,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

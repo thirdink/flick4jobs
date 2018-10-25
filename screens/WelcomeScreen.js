@@ -19,12 +19,17 @@ const SLIDE_DATA = [
 ]
 
 export class WelcomeScreen extends React.Component {
-  //   static navigationOptions = {
-  //   header: null,
-  // };
+  static navigationOptions = {
+    header: null,
+  };
+  
+  onSlidesComplete=()=>{
+    this.props.navigation.navigate('Auth');
+  }
+
   render() {
     return (
-        <Slides data={SLIDE_DATA}/>
+        <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete}/>
     )
   }
 }

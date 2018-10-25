@@ -9,7 +9,7 @@ export class ReviewScreen extends Component {
  
     <Button 
     title='Settings' 
-    onPress={() => navigation.navigate('settings')} 
+    onPress={() => navigation.navigate('Settings')} 
     backgroundColor="rgba(0,0,0,0)"
     color="rgba(0,122,255,1)"
 
