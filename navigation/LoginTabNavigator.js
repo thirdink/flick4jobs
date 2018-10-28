@@ -13,7 +13,9 @@ const MapStack = createStackNavigator({
 });
 
 MapStack.navigationOptions = {
+  // header:null,
   tabBarLabel: 'Map',
+  
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -32,6 +34,7 @@ const DeckStack = createStackNavigator({
 
 DeckStack.navigationOptions = {
   tabBarLabel: 'Deck',
+  // header:null,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -47,6 +50,7 @@ const ReviewStack = createStackNavigator({
 
 ReviewStack.navigationOptions = {
   tabBarLabel: 'review',
+  // header:null,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

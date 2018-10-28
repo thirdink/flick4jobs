@@ -64,8 +64,9 @@ const styles = {
         alignItems: 'center'
     },
     buttonStyle:{
-        backgroundColor: '#0288D1',
+        backgroundColor: '#F9B902',
         marginTop: 15,
+        
         
     }
 }
