@@ -63,5 +63,5 @@ LoginStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   AuthStack,
-  LoginStack,
+  // LoginStack,
 });

@@ -28,26 +28,44 @@ const SLIDE_DATA = [{
 ]
 
 export class WelcomeScreen extends React.Component {
-  state = {
+  constructor(props){
+    super(props)
+    this.state = {
     token: null
   }
+}
 
   static navigationOptions = {
     header: null,
   };
   async componentWillMount() {
-    let token = await AsyncStorage.getItem('fb_token');
+    // this.mounted = true;
+    // let token = await AsyncStorage.getItem('fb_token');
     
+    // if (token) {
+    //   this.props.navigation.navigate('Map');
+    //   this.setState({ token });
+    // } else {
+    //   this.setState({
+    //     token: false
+    //   })
+    // }
+    this.checkToken();
+  }
+
+  checkToken = async () => {
+    const token = await AsyncStorage.getItem('fb_token')
     if (token) {
-      this.props.navigation.navigate('Map');
       this.setState({ token });
+      this.props.navigation.navigate('Map');
     } else {
       this.setState({
         token: false
       })
     }
-
-
+  }
+  componentWillUnmount(){
+    // this.mounted = false;
   }
 
 
