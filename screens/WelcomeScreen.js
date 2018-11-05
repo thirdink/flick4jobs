@@ -64,9 +64,7 @@ export class WelcomeScreen extends React.Component {
       })
     }
   }
-  componentWillUnmount(){
-    // this.mounted = false;
-  }
+
 
 
 
