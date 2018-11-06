@@ -30,10 +30,11 @@ MapStack.navigationOptions = {
 
 const DeckStack = createStackNavigator({
   Deck: DeckScreen,
+ 
 });
 
 DeckStack.navigationOptions = {
-  tabBarLabel: 'Deck',
+  tabBarLabel: 'Jobs',
   // header:null,
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -54,7 +55,7 @@ ReviewStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+      name={Platform.OS === 'ios' ? `ios-checkmark-circle${focused ? '' : '-outline'}` : 'md-checkmark-circle'}
     />
   ),
 };
