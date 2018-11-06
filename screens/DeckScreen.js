@@ -18,31 +18,31 @@ export class DeckScreen extends Component {
       longitudeDelta: 0.02
     }
     return(
-      <Card title={job.jobtitle}>
-      <View style={{ height: 300 }}>
-      <MapView 
-      scrollEnabled={false}
-      style={{flex: 1}}
-      cacheEnabled={Platform.OS === 'android'? true:false}
-      initialRegion={initialRegion}
-      >
+        <Card title={job.jobtitle}>
+          <View style={{ height: 300 }}>
+            <MapView 
+            scrollEnabled={false}
+            style={{flex: 1}}
+            cacheEnabled={Platform.OS === 'android'? true:false}
+            initialRegion={initialRegion}
+            >
 
-      </MapView>
-      </View>
-      
-      <View style={styles.detailWrapper}>
-        <Text>
-          {job.company}
-        </Text>
-        <Text>
-          {job.formattedrelativeTime}
-        </Text>
-      </View>
-      <Text>
-        {job.snippet.replace(/<b>/g, '').replace(/<\/b/g, '')}
-      </Text>
+            </MapView>
+          </View>
+        
+          <View style={styles.detailWrapper}>
+              <Text>
+                {job.company}
+              </Text>
+              <Text>
+                {job.formattedrelativeTime}
+              </Text>
+          </View>
+          <Text>
+            {job.snippet.replace(/<b>/g, '').replace(/<\/b/g, '')}
+          </Text>
 
-      </Card>
+        </Card>
     )
   }
   renderNoMoreCards(){
